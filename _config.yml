@@ -1,0 +1,29 @@
+# Jekyll configuration
+
+name: Dimension
+description: 不一样的维度，不一样的世界
+
+# url is currently only used only for the RSS feed in feed.xml
+url: https://github.com/wsc12358/wsc12358.github.io
+
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: '/wsc12358.github.io'
+## default date_format
+date_format: 
+  title: "%m-%-d-%Y"
+  archive: "%m"
+  categories: "%m-%Y"
+  tag: "%m-%Y"
+# Language
+lan: "cn" 
+
+paginate: 3
+
+highlighter: rouge
+markdown: kramdown
+gems: ['jekyll-paginate']
+
+exclude: ['README.md', 'LICENSE', "*.bak"]
