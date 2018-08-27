@@ -17,6 +17,70 @@
        <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
        <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
+
+    <!-- 是画的表格有边框 -->
+    <style>
+        table{
+          border-left:1px solid #000000;border-top:1px solid #000000;
+          width: 100%;
+          word-wrap:break-word; word-break:break-all;
+        }
+        table th{
+        text-align:center;
+        }
+        table th,td{
+          border-right:1px solid #000000;border-bottom:1px solid #000000;
+        }
+        th{
+            background-color:#bdc3c7;
+        }
+    </style>
+
+    <!-- 可以画mermaid的插件，如流程图，，， -->
+    {% if page.mermaid %}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.0/mermaid.min.js"></script>
+        <script>
+            var config = {
+                startOnLoad:true,
+                flowchart:{
+                    useMaxWidth:false,
+                    htmlLabels:true
+                }
+            };
+            mermaid.initialize(config);
+            $(function(){
+                var elements = document.getElementsByClassName("language-mermaid");
+                for (var i = elements.length; i--;) {
+                    element = elements[i];
+                    var graphDefinition = element.innerText;
+                    if (graphDefinition) {
+                        var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
+                        if (svg) {
+                            var svgElement = document.createElement('div');
+                            preNode = element.parentNode;
+                            svgElement.innerHTML = svg;
+                            svgElement.setAttribute('class', 'mermaid');
+                            svgElement.setAttribute('data-processed', 'true');
+                            preNode.parentNode.replaceChild(svgElement, preNode);
+                        }
+                    }
+                }
+            });
+        </script>
+    {% endif %}
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.4.0/mermaid.full.min.js"></script>
+    <script src="https://cdn.rawgit.com/knsv/mermaid/0.5.6/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/0.5.6/dist/mermaid.css">
+    <script>mermaid.initialize({startOnLoad:true});</script> -->
+    
+    <!--加入可以使代码高亮和显示代码行号的插件-->
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdn.bootcss.com/highlightjs-line-numbers.js/1.1.0/highlightjs-line-numbers.min.js"></script>
+    <script>hljs.initLineNumbersOnLoad();</script>
+
+    <!--加入可以编写数学公式的插件-->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>

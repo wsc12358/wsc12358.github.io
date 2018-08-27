@@ -238,3 +238,4 @@ sudo cp xorg.conf.failsafe xorg.conf
 ```bash
 sudo reboot
 ```
+

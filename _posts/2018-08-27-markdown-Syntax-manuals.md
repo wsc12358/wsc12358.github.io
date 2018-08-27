@@ -1,18 +1,19 @@
 ---
 layout: post
-title:  "cmd markdown语法手册"
+title:  "markdown语法手册"
 categories: 
 - 编程语言
 tags: 
 - - 写作
 author: Dimension
+mermaid: true
 ---
 
-[『Cmd 技术渲染的沙箱页面，点击此处编写自己的文档』](https://www.zybuluo.com/mdeditor "作业部落旗下 Cmd 在线 Markdown 编辑阅读器")
+[『技术渲染的沙箱页面，点击此处编写自己的文档』](https://www.zybuluo.com/mdeditor "作业部落旗下 Cmd 在线 Markdown 编辑阅读器")
 
-# Cmd Markdown 简明语法手册
+#Markdown 简明语法手册
 
-标签： Cmd-Markdown
+标签：Markdown
 
 ---
 
@@ -126,6 +127,10 @@ Tags： 数学 英语 Markdown
 
 ~~这是一段错误的文本。~~
 
+```
+~~这是一段错误的文本。~~
+```
+
 ### 4. 注脚
 
 使用 [^keyword] 表示注脚。
@@ -199,92 +204,92 @@ function fib(n) {
 document.write(fib(10));
 ```
 
-### 7. 流程图
-
-#### 示例
-
-```flow
-st=>start: Start:>https://www.zybuluo.com
-io=>inputoutput: verification
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-sub=>subroutine: Your Subroutine
-e=>end
-
-st->io->op->cond
-cond(yes)->e
-cond(no)->sub->io
-```
-
-#### 更多语法参考：[流程图语法参考](http://adrai.github.io/flowchart.js/)
-
-### 8. 序列图
-
-#### 示例 1
-
-```seq
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
-
-#### 示例 2
-
-```seq
-Title: Here is a title
-A->B: Normal line
-B-->C: Dashed line
-C->>D: Open arrow
-D-->>A: Dashed open arrow
-```
-
-#### 更多语法参考：[序列图语法参考](http://bramp.github.io/js-sequence-diagrams/)
-
-### 9. 甘特图
+### 7. mermaid甘特图
 
 甘特图内在思想简单。基本是一条线条图，横轴表示时间，纵轴表示活动（项目），线条表示在整个期间上计划和实际的活动完成情况。它直观地表明任务计划在什么时候进行，及实际进展与计划要求的对比。
 
-```gantt
-    title 项目开发流程
-    section 项目确定
-        需求分析       :a1, 2016-06-22, 3d
-        可行性报告     :after a1, 5d
-        概念验证       : 5d
-    section 项目实施
-        概要设计      :2016-07-05  , 5d
-        详细设计      :2016-07-08, 10d
-        编码          :2016-07-15, 10d
-        测试          :2016-07-22, 5d
-    section 发布验收
-        发布: 2d
-        验收: 3d
+```mermaid
+  gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
 ```
+代码
+
+```
+\```mermaid
+  gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+\```
+```
+<span><font color="red">注意：使用时去掉</font>\```<font color="red">前面的</font>\\</span>
 
 #### 更多语法参考：[甘特图语法参考](https://knsv.github.io/mermaid/#gant-diagrams)
 
-### 10. Mermaid 流程图
+### 8. Mermaid 流程图
 
-```graphLR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-```
-
-#### 更多语法参考：[Mermaid 流程图语法参考](https://knsv.github.io/mermaid/#flowcharts-basic-syntax)
-
-### 11. Mermaid 序列图
-
-```sequence
-    Alice->John: Hello John, how are you?
-    loop every minute
-        John-->Alice: Great!
+```mermaid
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
     end
 ```
 
+```
+\```mermaid
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+\```
+```
+<span><font color="red">注意：使用时去掉</font>\```<font color="red">前面的</font>\\</span>
+#### 更多语法参考：[Mermaid 流程图语法参考](https://knsv.github.io/mermaid/#flowcharts-basic-syntax)
+
+### 9. Mermaid 序列图
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+```
+
+```
+\```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+\```
+```
+<span><font color="red">注意：使用时去掉</font>\```<font color="red">前面的</font>\\</span>
 #### 更多语法参考：[Mermaid 序列图语法参考](https://knsv.github.io/mermaid/#sequence-diagrams)
 
-### 12. 表格支持
+### 10. 表格支持
 
 | 项目        | 价格   |  数量  |
 | --------   | -----:  | :----:  |
@@ -292,8 +297,16 @@ D-->>A: Dashed open arrow
 | 手机        |   \$12   |   12   |
 | 管线        |    \$1    |  234  |
 
+代码
+```
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机     | \$1600 |   5     |
+| 手机        |   \$12   |   12   |
+| 管线        |    \$1    |  234  |
+```
 
-### 13. 定义型列表
+### 11. 定义型列表
 
 名词 1
 :   定义 1（左侧有一个可见的冒号和四个不可见的空格）
@@ -303,24 +316,25 @@ D-->>A: Dashed open arrow
 
         代码块（左侧有八个不可见的空格）
 
-### 14. Html 标签
+### 12. Html 标签
 
 本站支持在 Markdown 语法中嵌套 Html 标签，譬如，你可以用 Html 写一个纵跨两行的表格：
 
-    <table>
-        <tr>
-            <th rowspan="2">值班人员</th>
-            <th>星期一</th>
-            <th>星期二</th>
-            <th>星期三</th>
-        </tr>
-        <tr>
-            <td>李强</td>
-            <td>张明</td>
-            <td>王平</td>
-        </tr>
-    </table>
-
+```
+<table>
+    <tr>
+        <th rowspan="2">值班人员</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+    </tr>
+    <tr>
+        <td>李强</td>
+        <td>张明</td>
+        <td>王平</td>
+    </tr>
+</table>
+```
 
 <table>
     <tr>
@@ -336,7 +350,7 @@ D-->>A: Dashed open arrow
     </tr>
 </table>
 
-### 15. 内嵌图标
+### 13. 内嵌图标
 
 本站的图标系统对外开放，在文档中输入
 
@@ -352,7 +366,7 @@ D-->>A: Dashed open arrow
 
 更多的图标和玩法可以参看 [font-awesome](http://fortawesome.github.io/Font-Awesome/3.2.1/icons/) 官方网站。
 
-### 16. 待办事宜 Todo 列表
+### 14. 待办事宜 Todo 列表
 
 使用带有 [ ] 或 [x] （未完成或已完成）项的列表语法撰写一个待办事宜列表，并且支持子列表嵌套以及混用Markdown语法，例如：
 
