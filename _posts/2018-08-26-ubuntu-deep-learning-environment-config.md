@@ -74,8 +74,11 @@ sudo reboot
 ```
 <font color="red">如果出现蓝色界面，选择改变secure boot状态的选项，进去提示输入对应位的密码（如:enter 2 characters:则输入密码的前两位），输入几遍后最后选择yes启动。</font>
 打开终端，输入，nvidia-smi和nvidia-settings如果输出如下图，说明安装成功：
-![这里写图片描述](https://img-blog.csdn.net/20180729170124367?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-![这里写图片描述](https://img-blog.csdn.net/20180729170140771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/14.png)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/15.png)
+
 这时nvidia就安装好了，如果碰到黑屏，循环登录，参考后面的<font color="red">**问题解决方案**</font>。
 ## Cuda的安装
 找到下载文件的路径
@@ -163,20 +166,27 @@ sudo service lightdm start
 
 <font color="red">问题1：</font> 安装Ubuntu的时候，卡在Ubuntu的LOGO界面或黑屏
 
-![这里写图片描述](https://img-blog.csdn.net/20180729171240657?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/16.png)
+
  <font color="red">问题2：</font>  双显卡安装Nvidia驱动，循环登录或黑屏
- ![这里写图片描述](https://img-blog.csdn.net/20180729171249944?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/17.png)
+
 <font color="red">问题3：</font>  启动后黑屏，并出现ubuntu the system is running in low-graphics mode 的错误
-![这里写图片描述](https://img-blog.csdn.net/20180729171303860?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/18.png)
+
 <font color="green">针对以上3个问题，我们这里提出了相应的解决方案。</font>
 <font color="d60062">注意！！！：对于问题1和问题2，如果下面对应的方法无效，则去掉"quiet splash"后面的apci_osi或者nomodeset,在vt_handoff后面添加acpi_osi或者nomodeset！！！</font>
-
+<br>
 <font color="red">方案1（针对问题1）：</font>
 1.	启动系统后在Grub界面，选择ubuntu系统的那一行，然后按E键，就会进入Grub的编辑状态。
-![这里写图片描述](https://img-blog.csdn.net/20180729171539102?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/19.png)
 
 2、在quiet splash 后面加（先打空格）nomodeset，然后按F10保存启动
-![这里写图片描述](https://img-blog.csdn.net/20180729171605978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70) 
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/20.png)
 
 3、由于那个是临时改动，所以还需要一步，打开终端：
 ```bash
@@ -190,13 +200,15 @@ sudo update-grub
 
 重启即可。
 
-![这里写图片描述](https://img-blog.csdn.net/20180729171740331?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/21.png)
+
 <font color="red">方案2（针对问题2）：</font>
 问题的根源是集显的问题（但由于我们是双系统或双显卡或着存在Grub启动项，导致没有解决到问题的根本！）
 这一切的原因就是因为我们装系统的时候，加的那个参数nomodeset 接下来详细教程
 1、	首先确定是否nvidia驱动已安装，按Ctrl+Alt+F1进入tty模式，登录，然后输入nvidia-smi如果输出显卡信息，说明安装成功了。
 2、重新启动，在Grub界面选Ubuntu系统那一行然后按E键进入编辑模式：
-![这里写图片描述](https://img-blog.csdn.net/20180729173005806?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/22.png)
  
 3、也是上图那个位置，在 "quiet splash nomodeset",主要看是否有nomodeset，有的话删除它（可能有人是queit splash= nomodeset,删除'= nomodeset'即可！）
 4、然后在原来那个位置加 acpi_osi=linux（代码之间用空格隔开！），然后按F10启动，就可以进入界面了。
@@ -207,7 +219,8 @@ sudo vi /etc/default/grub 或 sudo gedit /etc/default/grub
 #然后更新grub
 sudo update-grub
 ```
-![这里写图片描述](https://img-blog.csdn.net/20180729173223406?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dzYzEyMzU4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/23.png)
+
 解释一下 Grub引导了系统进行启动，所以它的参数被传入了，即nomodeset（调用集显）如果存在，系统就会一直调用集显，然后就出现循环登录或黑屏。由于刚刚安装系统一般没有驱动，很多人只能通过调用集显去进入图形界面（除非在命令行下安装了驱动），导致了nomodeset参数的加入。
 而acpi_osi=linux是告诉Grub，电脑将以Linux系统启动，调用其中驱动，所以可以用Nvidia的驱动进行显示了！
 <font color="red">方案3（针对问题3）：</font>

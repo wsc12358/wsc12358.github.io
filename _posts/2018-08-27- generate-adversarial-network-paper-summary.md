@@ -10,16 +10,32 @@ author: Dimension
 ---
 
 转自[haoji007](https://blog.csdn.net/haoji007/article/details/80392454)，对目前GAN经典的及最新的较有影响力的论文进行了阅读与整理，目前仅完成了论文梗概的总结。后续将会分篇详细介绍。
+
+<style>
+table
+{
+    font-family:serif;
+}
+th
+{
+    background-color:#bdc3c7;
+}
+td,th
+{
+	text-align:center;
+}
+</style>
+
 <table border="1">
 <tr>
-<td>归类</td>
-<td width="200">题目</td>
-<td>发表</td>
-<td width="1000">贡献摘要</td>
+<th>归类</th>
+<th width="200">题目</th>
+<th>发表</th>
+<th width="1000">贡献摘要</th>
 </tr>
 
 <tr>
-<td rowspan="6">理论</td>
+<td rowspan="6" bgcolor="#9cd3d3">理论</td>
 <td>Generative Adversarial Nets(Ian Goodfellow, Yoshua Bengio)</td>
 <td>NIPS2014</td>
 <td>发明GAN，生成器与判别器是较简单的多层感知机，对比了RBM、MCMC、DBN、CAE、GSN等工作，给出经典的二元的优化目标，训练过程的图解及算法流程（训练k次D后更新G，随机梯度下降法优化），证明了唯一最优解的存在，说明了最优解时分布的情况，在MNIST、TFD、CIFAR-10上展示了生成图像</td>
@@ -57,7 +73,7 @@ author: Dimension
 </tr>
 
 <tr>
-<td rowspan="4">改进</td>
+<td rowspan="4" bgcolor="#f6f3a7">改进</td>
 <td>Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks</td>
 <td>ArXiv2015</td>
 <td>DCGAN，对原始GAN的第一个重要改进。为生成器与判别器引入深度模型，在generator和discriminator上都使用batch normalization，无理论创新，均为深度模型训练时的改进。</td>
@@ -82,7 +98,7 @@ author: Dimension
 </tr>
 
 <tr>
-<td rowspan="4">与各领域的结合</td>
+<td rowspan="4" bgcolor="#ff6473">与各领域的结合</td>
 <td>Unsupervised and Semi-Supervised Learning with Categorical Generative Adversarial Networks</td>
 <td>ICLR2016</td>
 <td>从未标记或部分标记的样本中学习判别分类器。在观测样本和他们预测的类别分布间trades-off互信息，对生成式聚类、判别式聚类等进行了综述，通过指派一个标签y给每个样本，将数据分类到K个类别中去的分类器，而不是学习一个二分类函数，将问题由“生成器生成属于数据集的样本”变为“生成属于K个中的一个确切的类别的样本”。在其方法中，会先定性地评估对抗生成器生成的样本的保真度，然后确定CatGAN目标和判别聚类算法(RIM)之间的联系</td>

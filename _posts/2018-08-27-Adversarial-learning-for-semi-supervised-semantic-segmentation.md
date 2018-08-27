@@ -20,26 +20,35 @@ author: Dimension
 
 **当用无注解数据时，**用半监督方法训练分割网络，在从分割网络中获取未标记图像的初始分割预测后，通过判别网络对分割预测进行传递，得到一个置信图。我们反过来将这个置信图作为监督信号，使用一个自学机制来训练带masked交叉熵损失的分割网络。置信图表示了预测分割的质量。
 
-![](/assets/images/2018-8-27/1.png)
+![这里写图片描述]({{site.baseurl}}/assets/images/2018-8-27/1.png)
 
 ### 对抗网络的半监督训练
 
 输入图像$x_n$大小为H*W*3, 分割网络表示为$s(·)$,预测概率图为$s(x_n)$大小为H*W*C。全卷积discriminator表示为$D(·)$,其输入有两种形式：分割预测$s(x_n)$和one-hot编码的gournd truth  $Y_n$.
 #### 训练discriminator网络：
   最小化空间交叉熵损失$L_D$,其表示为：
+
   $$L_D=-\sum_{h,w} (1-y_n)log(1-(s(x_n))^{(h,w)})+y_nlog(D(Y_n)^{(h,w)})$$
+
   当输入来自分割网络时$y_n=0$,若来自ground truth则为$y_n=1$.
   为了将ground truth转换为C通道的概率图，我们用one-hot机制进行编码，即如果像素$x_n^{(h,w)}$输入类C，则取1，否则为0.
 #### 训练分割网络：
   这里使用的损失是多任务损失：
+
   $$L_{seg}=L_{ce}+λ_{adv}L_{adv}+λ_{semi}L_{semi}$$
+
   其中$L_{ce}$，$L_{adv}$和$L_{semi}$分别代表 multi-class cross entropy loss, the adversarial loss,和the semi-supervised loss，这里的$λ_{adv}$和$λ_{semi}$.
   这里先考虑用有注解的数据，则：
+
   $$L_{ce}=-\sum_{h,w}\sum_{c\epsilon{C}}Y_n^{(h,w,c)}log(s(x_n)^{(h,w,c)})$$
+
   $L_{adv}$表示为：
+
   $$L_{adv}=-\sum_{h,w}log(D(S(X_N))^{(h,w)})$$
   
 #### 用无标签数据训练 
  由于没有ground truth,因此这里不能使用$L_{ce}$,这里提出了用自学机制在无注解数据中利用被训练的discriminator，大意是被训练的discriminator可以生成一个置信图,即$D(S(X_n))^{(h,w)}$,这个公式用来推断预测结构足够接近gournd truth的区域。这里用一个阈值来二值化置信图，$\hat{Y}=argmax(s(x_n))$,使用二值化置信图，半监督损失可以定义为：
+
  $$L_{semi}=-\sum_{h,w}\sum_{c\epsilon{C}}I(D(S(x_n))^{(h,w)}>T_{semi)}\bullet\hat{Y}_n^{(h,w,c)}log(s(x_n)^{(h,w,c)})$$
+ 
  其中$I(\bullet)$是指示函数，$T_{semi}$是阈值，注意在训练期间，自学目标值$\hat{Y}_n$和指示函数的值为常量，因此上式可以简单看做空间交叉熵损失。
