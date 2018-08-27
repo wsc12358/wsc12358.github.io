@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Adversarial learning for semi-supervised semantic segmentation
+title:  "Adversarial learning for semi-supervised semantic segmentation"
 categories: 
 - 论文
 - 深度学习

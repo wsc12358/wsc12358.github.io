@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 18种和“距离(distance)”、“相似度(similarity)”相关的量的小结
+title: "18种和“距离(distance)”、“相似度(similarity)”相关的量的小结"
 categories: 
 - 深度学习
 tags: 

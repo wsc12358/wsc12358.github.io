@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adversarial synthesis learning enable segmentation without target modality ground truth
+title: "Adversarial synthesis learning enable segmentation without target modality ground truth"
 categories: 
 - 论文
 - 深度学习

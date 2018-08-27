@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adversarial learning with multi-scale loss for skin lesion segmentation
+title: "Adversarial learning with multi-scale loss for skin lesion segmentation"
 categories: 
 - 论文
 - 深度学习

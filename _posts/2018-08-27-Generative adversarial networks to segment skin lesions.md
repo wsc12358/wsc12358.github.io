@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generative adversarial networks to segment skin lesions
+title: "Generative adversarial networks to segment skin lesions"
 categories: 
 - 论文
 - 深度学习
