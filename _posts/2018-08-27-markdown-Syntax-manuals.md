@@ -11,11 +11,21 @@ mermaid: true
 
 [『技术渲染的沙箱页面，点击此处编写自己的文档』](https://www.zybuluo.com/mdeditor "作业部落旗下 Cmd 在线 Markdown 编辑阅读器")
 
+* 目录   
+{:toc #markdown-toc}
+
 #Markdown 简明语法手册
 
 标签：Markdown
 
 ---
+### 1. 生成目录树()
+在_config.yml中添加`markdown: kramdown`，然后在文章中添加目录的地方写入
+
+```
+* 目录   
+{:toc #markdown-toc}
+```
 
 ### 1. 斜体和粗体
 
