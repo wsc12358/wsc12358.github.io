@@ -41,7 +41,14 @@ $$L_{seg}(S,G_1,A)=-\sum{_i}m_i\cdot{log(S(G_1(x_i)))}$$
 
 m是图像x的手工标签，i是像素点索引。total loss定义如下：
 
-$$L_{total}= \lambda_1\cdot{L_{GAN}(G_1,D_1,A,B)}+\lambda_2\cdot{L_{GAN}(G_1,B_2,B,A)}+\lambda_3\cdot{L_{cycle}(G_1,G_2,A)}+\lambda_4\cdot{L_{cycle}(G_2,G_1,B)}+\lambda_5\cdot{L_{seg}(S,G_1,A)}$$
+$$
+\begin{equation}
+\begin{aligned}
+&L_{total}= \lambda_1\cdot{L_{GAN}(G_1,D_1,A,B)}+\lambda_2\cdot{L_{GAN}(G_1,B_2,B,A)}+\lambda_3\cdot{L_{cycle}(G_1,G_2,A)}\\
+&+\lambda_4\cdot{L_{cycle}(G_2,G_1,B)}+\lambda_5\cdot{L_{seg}(S,G_1,A)}
+\end{aligned}
+\end{equation} 
+$$
 
 在工作中，根据经验，$\lambda$的取值分别为$\lambda_1=1$,$\lambda_2=1$,$\lambda_3=10$,$\lambda_4=10$,$\lambda_5=1$，为了最小化$L_{total}$，这里使用了Adam优化器，通过path A和path B的重构图和分割图如图3所示。
 在测试中，仅仅使用被训练的网络S，$B^{'}$代表测试CT图像，采用自动分割和手工分割的Dice相似系数(DSC)值作为评价不同分割方法性能的指标。所有统计显著性检验均采用Wilcoxon 秩检验(p<0.05)

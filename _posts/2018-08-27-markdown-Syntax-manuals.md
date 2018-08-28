@@ -163,6 +163,63 @@ $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
 
 $$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 
+<font color="red">关于公式换行的问题</font>很多时候我们写的公式太长，一行显示不下，结果一部分公式跑到界面外了，这时就用到了公式换行。
+
+<p style="color:blue;">需要换行的公式可以写在下面的结构中</p>
+
+```
+$$
+\begin{equation}
+\begin{aligned}
+.......
+\end{aligned}
+\end{equation} 
+$$
+```
+<p style="color:red;">在需要换行的地方加入`\\`,在需要对齐的地方加入&</p>
+这里有两个例子演示：
+
+$$
+\begin{equation}
+\begin{aligned}
+&L_{total}= \lambda_1\cdot{L_{GAN}(G_1,D_1,A,B)}+\lambda_2\cdot{L_{GAN}(G_1,B_2,B,A)}+\lambda_3\cdot{L_{cycle}(G_1,G_2,A)}\\
+&+\lambda_4\cdot{L_{cycle}(G_2,G_1,B)}+\lambda_5\cdot{L_{seg}(S,G_1,A)}
+\end{aligned}
+\end{equation} 
+$$
+
+代码如下：
+
+```
+$$
+\begin{equation}
+\begin{aligned}
+&L_{total}= \lambda_1\cdot{L_{GAN}(G_1,D_1,A,B)}+\lambda_2\cdot{L_{GAN}(G_1,B_2,B,A)}+\lambda_3\cdot{L_{cycle}(G_1,G_2,A)}\\
+&+\lambda_4\cdot{L_{cycle}(G_2,G_1,B)}+\lambda_5\cdot{L_{seg}(S,G_1,A)}
+\end{aligned}
+\end{equation} 
+$$
+```
+$$
+\begin{equation}
+\begin{aligned}
+f_(x)&=x^2\\
+&=x^3
+\end{aligned}
+\end{equation} 
+$$
+
+代码如下：
+```
+$$
+\begin{equation}
+\begin{aligned}
+f_(x)&=x^2\\
+&=x^3
+\end{aligned}
+\end{equation} 
+$$
+```
 访问 [MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) 参考更多使用方法。
 
 ### 6. 加强的代码块
