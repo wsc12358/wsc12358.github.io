@@ -11,3 +11,5 @@ mermaid: true
 ---
 # 1.关于GAN的简单了解
 
+>首先论文传送门 \-\-\-\-\->[Generative Adversarial Nets](https://arxiv.org/abs/1406.2661)
+
