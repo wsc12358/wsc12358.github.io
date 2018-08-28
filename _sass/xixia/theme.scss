@@ -13,11 +13,6 @@ body {
     min-height:100%;
 }
 
-// .page-footer{
-//     margin-left: auto;
-//     margin-right: auto;
-// }
-
 .footer {
     text-align: center;
     color: $footer-color;
@@ -76,7 +71,13 @@ body {
     margin: 0;
     padding-bottom:60px;
 }
-
+.represent{
+    font-size: 17px;
+    color: $article-color;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* post style */
 .article {
     font-size: 17px;

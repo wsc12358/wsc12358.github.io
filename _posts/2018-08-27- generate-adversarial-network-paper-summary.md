@@ -24,14 +24,17 @@ td,th
 {
 	text-align:center;
 }
+.report{
+    width:10%;
+}
 </style>
 
 <table border="1">
 <tr>
 <th>归类</th>
-<th width="200">题目</th>
-<th>发表</th>
-<th width="1000">贡献摘要</th>
+<th width="20%">题目</th>
+<th class="report">发表</th>
+<th>贡献摘要</th>
 </tr>
 
 <tr>
