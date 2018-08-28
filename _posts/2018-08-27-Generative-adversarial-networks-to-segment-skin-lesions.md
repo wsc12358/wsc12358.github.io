@@ -7,6 +7,7 @@ categories:
 tags: 
 - 图像分割
 author: Dimension
+description: 这篇论文主要针对皮肤病变图变化多样且大部分斑点位于图中心的特点，使用GAN进行分割
 ---
 
 # 简介
