@@ -32,6 +32,7 @@ layout: default
 </div>
 {% endfor %}
 
+<center>
 <div class="pagination">
   {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
@@ -45,3 +46,4 @@ layout: default
     <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">向后</a>
   {% endif %}
 </div>
+</center>
