@@ -13,7 +13,7 @@ body {
     min-height:100%;
 }
 
-.footer {
+.footer_1 {
     text-align: center;
     color: $footer-color;
     position:absolute;
@@ -24,16 +24,16 @@ body {
     background-color:$footer-background-color;
 }
 
-.footer a {
+.footer_1 a {
     /* color: #aaa; */
     color: $footer-a-color;
 }
 
-.footer a:hover {
+.footer_1 a:hover {
     color: $footer-a-hover-color;
 }
 
-.footer p {
+.footer_1 p {
     margin-top:10px;
 }
 
