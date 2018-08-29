@@ -20,10 +20,16 @@ date_format:
 # Language
 lan: "cn" 
 
-paginate: 10
+paginate: 12
 
 highlighter: rouge
 markdown: kramdown
 gems: ['jekyll-paginate']
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
+
+#permalink:        /:categories/:title.html
+permalink: /:year/:month/:day/:title.html
+defaults:
+  - values:
+      layout: "default"

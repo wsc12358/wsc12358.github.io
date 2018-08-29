@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "生成式对抗网络论文阅读整理"
+background: orange
+background-image: https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2307980746,1495423919&fm=26&gp=0.jpg
 categories: 
 - 论文
 - 深度学习

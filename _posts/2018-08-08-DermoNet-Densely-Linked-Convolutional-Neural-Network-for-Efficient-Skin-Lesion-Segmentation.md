@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "DermoNet:Densely Linked Convolutional Neural Network for Efficient Skin Lesion Segmentation"
+background: blue
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535557224389&di=db493145f0c708938be5cda60a974411&imgtype=0&src=http%3A%2F%2Fwww.xp510.com%2Fshouji%2Fuploadfile%2F2017%2F0718%2F20170718094800621.jpg
 categories: 
 - 论文
 - 深度学习

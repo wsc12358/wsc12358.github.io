@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Generative adversarial networks to segment skin lesions"
+background: red
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535557015986&di=837eab26e870f14933d4732293da9f60&imgtype=0&src=http%3A%2F%2Fimg.lenovomm.com%2Fs3%2Fimg%2Fapp-img-lestore%2F5048-2015-07-07014724-1436204844158.jpg%3FisCompress%3Dtrue%26width%3D320%26height%3D480%26quantity%3D1%26rotate%3Dtrue
 categories: 
 - 论文
 - 深度学习

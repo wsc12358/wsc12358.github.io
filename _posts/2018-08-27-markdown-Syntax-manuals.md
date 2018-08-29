@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "markdown语法手册"
+background: green
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536152061&di=a1c64e63a9ad696bc3513846fe872947&imgtype=jpg&er=1&src=http%3A%2F%2Fb.zol-img.com.cn%2Fsjbizhi%2Fimages%2F4%2F320x510%2F1364438696369.jpg
 categories: 
 - 编程语言
 tags: 

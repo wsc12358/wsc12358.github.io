@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Adversarial learning with multi-scale loss for skin lesion segmentation"
+background: red
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535556894390&di=5cdf8102f9fa1704bf39133041393f2b&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201409%2F07%2F105843odqzqby9d9bmz9mr.png
 categories: 
 - 论文
 - 深度学习

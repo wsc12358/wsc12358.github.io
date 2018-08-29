@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Adversarial learning for semi-supervised semantic segmentation"
+background: green
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535556737605&di=92ca9e203bfa90ea61ebdaee1d33bcbd&imgtype=0&src=http%3A%2F%2Fbcs.91.com%2Frbpiczy%2Fsoft%2F2013%2F7%2F4%2F64d3f5cc874641c4b81871cc828ce259%2Fthumb_0025b65b68fc4479b8686c30429e9cfb_320x480.jpg
 categories: 
 - 论文
 - 深度学习

@@ -2,21 +2,9 @@
 layout: default
 ---
 {% assign trans = site.data.values[site.lan] %}
-{% for post in paginator.posts %}
+<!-- {% for post in paginator.posts %}
 <div class="well">
-
     <span class="post-date">
-        <!--
-        {% assign d = post.date | date: "%d" | plus:'0' %}
-        {{ post.date | date: "%B" }}
-        {% case d %}
-        {% when 1 or 21 or 31 %}{{ d }}st,
-        {% when 2 or 22 %}{{ d }}nd,
-        {% when 3 or 23 %}{{ d }}rd,
-        {% else %}{{ d }}th,
-        {% endcase %}
-        {{ post.date | date: "%Y" }}
-        -->
         {% assign date_format = site.date_format.title %}
         {{ post.date | date: date_format }}
     </span>
@@ -28,9 +16,45 @@ layout: default
     <div class="post-description">
         <p><font size="2" face="Verdana">{{ post.description }}</font></p>
     </div>
-    
 </div>
-{% endfor %}
+{% endfor %} -->
+
+<div class="main-content index-page clearfix ">
+	<div class="post-lists">
+		<div class="post-lists-body">
+			{% for posts in paginator.posts %}
+			<div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{posts.background-image }}');"></div>
+					<a href="{{ site.baseurl }}{{ posts.url }}">
+						<div class="item-desc">
+							<p>{{ posts.content | strip_html | strip_newlines | truncate: 100 }}</p>
+						</div>
+					</a>
+					<div class="item-slant reverse-slant  bg-{{ posts.background }}"></div>
+					<div class="item-slant">
+						<div class="liberxue-title">
+							原创
+						</div>
+					</div>
+					<div class="item-label">
+						<div class="item-title"><a href="{{ site.baseurl }}{{ posts.url }}" title="访问 {{ posts.title }}">{{ posts.title }}</a></div>
+						<div class="item-meta clearfix">
+							<div class="item-meta-ico bg-ico-book" style="background: url('style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-cat">
+								<a href="" title="访问 {{ posts.category }}" data-hover="{{ posts.category }}">{{ posts.categories
+									}}
+								</a>
+								<a href="" title="访问 {{ posts.date | date: " %Y "}}" data-hover="{{ posts.date | date: "
+								 %F %H:%M "}}">{{ posts.date | date: "%F %H:%M"}}</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
 
 <center>
 <div class="pagination" style=>

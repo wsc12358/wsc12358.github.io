@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "18种和“距离(distance)”、“相似度(similarity)”相关的量的小结"
+background: red
+background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535557261869&di=26fa8f88702fbc95ad0b102658c090b7&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201410%2F02%2F20141002195730_ywXJB.jpeg
 categories: 
 - 深度学习
 tags: 
