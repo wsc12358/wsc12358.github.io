@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign trans = site.data.values[site.lan] %}
 {% for post in paginator.posts %}
-<div class="well represent">
+<div class="well">
 
     <span class="post-date">
         <!--
@@ -33,7 +33,7 @@ layout: default
 {% endfor %}
 
 <center>
-<div class="pagination">
+<div class="pagination" style=>
   {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
         <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">向前</a>

@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ site.name }}</title>
-	<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.jpg">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
     <link href="{{ site.baseurl }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
     <!--[if IE 7]>
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
     <![endif]-->
@@ -17,59 +20,66 @@
        <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
        <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
-      
+
+
     <!-- 是画的表格有边框 -->
     <style>
-        table{
-          border-left:1px solid #000000;border-top:1px solid #000000;
-          width: 100%;
-          word-wrap:break-word; word-break:break-all;
+        table {
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+            width: 100%;
+            word-wrap: break-word;
+            word-break: break-all;
         }
-        table th,td{
-          border-right:1px solid #000000;border-bottom:1px solid #000000;text-align:center;
+
+        table th,
+        td {
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            text-align: center;
         }
-        th{
-            background-color:#bdc3c7;
+
+        th {
+            background-color: #bdc3c7;
         }
     </style>
 
     <!-- 可以画mermaid的插件，如流程图，，， -->
     {% if page.mermaid %}
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.0/mermaid.min.js"></script>
-        <script>
-            var config = {
-                startOnLoad:true,
-                flowchart:{
-                    useMaxWidth:false,
-                    htmlLabels:true
-                }
-            };
-            mermaid.initialize(config);
-            $(function(){
-                var elements = document.getElementsByClassName("language-mermaid");
-                for (var i = elements.length; i--;) {
-                    element = elements[i];
-                    var graphDefinition = element.innerText;
-                    if (graphDefinition) {
-                        var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
-                        if (svg) {
-                            var svgElement = document.createElement('div');
-                            preNode = element.parentNode;
-                            svgElement.innerHTML = svg;
-                            svgElement.setAttribute('class', 'mermaid');
-                            svgElement.setAttribute('data-processed', 'true');
-                            preNode.parentNode.replaceChild(svgElement, preNode);
-                        }
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.0/mermaid.min.js"></script>
+    <script>
+        var config = {
+            startOnLoad: true,
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        };
+        mermaid.initialize(config);
+        $(function () {
+            var elements = document.getElementsByClassName("language-mermaid");
+            for (var i = elements.length; i--;) {
+                element = elements[i];
+                var graphDefinition = element.innerText;
+                if (graphDefinition) {
+                    var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function (svg) { });
+                    if (svg) {
+                        var svgElement = document.createElement('div');
+                        preNode = element.parentNode;
+                        svgElement.innerHTML = svg;
+                        svgElement.setAttribute('class', 'mermaid');
+                        svgElement.setAttribute('data-processed', 'true');
+                        preNode.parentNode.replaceChild(svgElement, preNode);
                     }
                 }
-            });
-        </script>
-    {% endif %}
+            }
+        });
+    </script> {% endif %}
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.4.0/mermaid.full.min.js"></script>
     <script src="https://cdn.rawgit.com/knsv/mermaid/0.5.6/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/0.5.6/dist/mermaid.css">
     <script>mermaid.initialize({startOnLoad:true});</script> -->
-    
+
     <!--加入可以使代码高亮和显示代码行号的插件-->
     <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
@@ -83,34 +93,33 @@
     </script>
     <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
     </script>
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" type="text/css">
-{% include isso-comments.html %}
+    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" type="text/css"> {% include isso-comments.html %}
 </head>
 
 <body>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    {% assign trans = site.data.values[site.lan] %}
-                    <li class="active"><a href="{{ site.baseurl }}/">{{ trans.home }}</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive.html">{{ trans.archive }}</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/categories.html">{{ trans.categories }}</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/tags.html">{{ trans.tags }}</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/about.html">{{ trans.about }}</a></li>
-                </ul>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        {% assign trans = site.data.values[site.lan] %}
+                        <li class="active"><a href="{{ site.baseurl }}/">{{ trans.home }}</a></li>
+                        <li class="active"><a href="{{ site.baseurl }}/archive.html">{{ trans.archive }}</a></li>
+                        <li class="active"><a href="{{ site.baseurl }}/categories.html">{{ trans.categories }}</a></li>
+                        <li class="active"><a href="{{ site.baseurl }}/tags.html">{{ trans.tags }}</a></li>
+                        <li class="active"><a href="{{ site.baseurl }}/about.html">{{ trans.about }}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
