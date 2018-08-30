@@ -153,3 +153,13 @@ body {
 .navbar-custom .icon-bar {
     background-color: $nav-bar-icon-bar;
 }
+
+ @media only screen and (max-width:768px){
+    .article {
+        font-size: 10px;
+        color: $article-color;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} 
