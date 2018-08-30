@@ -26,25 +26,72 @@
             width: 90%;
             height: 35px;
             color: #333;
-            background-color: rgba(227,231,236,.2);
+            background-color: rgba(227, 231, 236, .2);
             line-height: 35px;
-            padding:0px 16px;
+            padding: 0px 16px;
             border: 1px solid #c0c0c0;
             font-size: 16px;
             font-weight: bold;
             border-radius: 17px;
             outline: none;
             box-sizing: border-box;
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
         }
+
         #search-input:focus {
             outline: none;
             border-color: rgb(102, 175, 233);
             background-color: #fff;
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #007fff;
         }
-        </style>
-       
+    </style>
+    <!-- 一键回到顶部的js部分 -->
+    <script>
+        $("#back-top").hide();
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#back-top').fadeIn();
+                } else {
+                    $('#back-top').fadeOut();
+                }
+            });
+            $('#back-top a').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 300);
+                return false;
+            });
+        });
+    </script>
+    <!-- 一键回到顶部的css部分 -->
+    <style>
+        #back-top {
+            position: fixed;
+            bottom: 30px;
+            /* margin-left: 1040px; */
+            /* margin-right: 50px; */
+        }
+
+        #back-top a {
+            width: 54px;
+            height: 54px;
+            display: block;
+            background: #ddd url(/wsc12358.github.io/assets/images/back_top_arrow.png) no-repeat center center;
+            background-color: #aaa;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            transition: 1s;
+        }
+
+        #back-top a:hover {
+            background-color: #777;
+        }
+    </style>
+
     <!-- 是画的表格有边框 -->
     <style>
         table {
@@ -143,7 +190,7 @@
                         <li class="active"><a href="{{ site.baseurl }}/about.html">{{ trans.about }}</a></li>
                     </ul>
                 </div>
-            
+
             </div>
         </div>
     </div>
