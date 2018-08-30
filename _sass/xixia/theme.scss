@@ -155,11 +155,34 @@ body {
 }
 
  @media only screen and (max-width:768px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 14px;
+    }
+    h5{
+        font-size: 12px;
+    }
+    h6{
+        font-size: 10px;
+    }
     .article {
         font-size: 10px;
         color: $article-color;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .post-date {
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 3px;
     }
 } 
