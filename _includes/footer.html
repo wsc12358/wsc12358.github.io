@@ -14,6 +14,24 @@
     {% include analytics.html %} 
 -->
 
+<!-- 添加搜索功能 -->
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="{{ site.baseurl }}/search/img/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="{{ site.baseurl }}/search/img/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
+</div>
+
+<link rel="stylesheet" href="{{ site.baseurl }}/search/css/cb-search.css">
+<script src="{{ site.baseurl }}/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="{{ site.baseurl }}/search/js/cb-search.js"></script>
+
 </body>
 
 </html>
