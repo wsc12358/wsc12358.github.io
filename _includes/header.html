@@ -163,10 +163,11 @@
     </script>
     <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
     </script>
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" type="text/css"> {% include isso-comments.html %}
+
+    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" type="text/css">
+     {% include isso-comments.html %}
 </head>
 
-<body>
 
     <div class="container-fluid">
         <div class="row-fluid">
@@ -180,7 +181,7 @@
                     </button>
                     <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display:inline;">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         {% assign trans = site.data.values[site.lan] %}
                         <li class="active"><a href="{{ site.baseurl }}/">{{ trans.home }}</a></li>
@@ -190,8 +191,6 @@
                         <li class="active"><a href="{{ site.baseurl }}/about.html">{{ trans.about }}</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
-</body>
