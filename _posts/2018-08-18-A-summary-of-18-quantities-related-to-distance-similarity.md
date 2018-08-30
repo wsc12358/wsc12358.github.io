@@ -74,7 +74,7 @@ td,th
 <td>Hamming Distance</td>
 <td>海明距离</td>
 <td class="equation">逐个字符(或逐位)对比，统计不一样的位数的个数总和</td>
-<td class="left">所得值越小，参与对比的两个元素约相似；下面是从wikipedia借的4bit的海明距离示意图 <img src="{{site.baseurl}}/assets/images/2018-8-27/13.png" width="300px" height="300px"></td>
+<td class="left">所得值越小，参与对比的两个元素约相似；下面是从wikipedia借的4bit的海明距离示意图 <img src="{{site.baseurl}}/assets/images/2018-8-27/13.png" width="40%" height="40%"></td>
 </tr>
 
 <tr>
