@@ -18,7 +18,9 @@ description: 这是一些在深度学习图像处理过程中，如果不想用�
 table
 {
     font-family:serif;
-    width:100%
+    width:100%;
+    word-break:break-all; 
+    word-wrap:break-all;
 }
 th
 {
@@ -113,7 +115,7 @@ td,th
 <tr>
 <td>Mahalanobis Distance</td>
 <td>马氏距离</td>
-<td>$d=\sqrt{(\overrightarrow{x}-\overrightarrow{y})^T{S^{-1}}(\overrightarrow{x}-\overrightarrow{y})}$其中S是x和y的协方差矩阵</td>
+<td>$d=\sqrt{(\overrightarrow{x}-\overrightarrow{y})^T{S^{-1}}(\overrightarrow{x}-\overrightarrow{y})}$<br>其中S是x和y的协方差矩阵</td>
 <td>印度统计学家马哈拉诺比斯(P. C. Mahalanobis)提出的，表示数据的协方差距离。它是一种有效的计算两个未知样本集的相似度的方法；若协方差矩阵是对角阵(diagonal)，则该距离退化为欧式距离</td>
 </tr>
 
@@ -192,7 +194,14 @@ H^2(P,Q)=\sqrt{1-\int{\sqrt{f(x)g(x)}\,{\rm d}x}}$$</td>
 <tr>
 <td>Chebyshev Distance</td>
 <td>切比雪夫距离</td>
-<td>$$D_{Chebyshev}(p,q)=max_{i}(|p_i-q_i|)=lim_{k \to +\infty}(\sum_{i=1}^{n}|p_i-q_i|^k)^{\frac{1}{k}}$$</td>
+<td>$$
+\begin{equation}
+\begin{aligned}
+D_{Chebyshev}(p,q)&=max_{i}(|p_i-q_i|)\\
+&=lim_{k \to +\infty}(\sum_{i=1}^{n}|p_i-q_i|^k)^{\frac{1}{k}}
+\end{aligned}
+\end{equation} 
+$$</td>
 <td>切比雪夫距离是由一致范数(uniform norm)(或称为上确界范数)所衍生的度量，也是超凸度量</td>
 </tr>
 </table>
