@@ -24,6 +24,10 @@ paginate: 12
 
 highlighter: rouge
 markdown: kramdown
+kramdown:
+    input: GFM
+plugins:
+  - jekyll-feed
 gems: ['jekyll-paginate']
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
