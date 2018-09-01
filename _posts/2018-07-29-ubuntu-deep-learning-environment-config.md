@@ -4,7 +4,9 @@ istop: true
 background: purple
 background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535556683033&di=854c5dfb4a5b53e58a7ca39315305563&imgtype=0&src=http%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1706%2F28-1F622164P0.jpg
 title:  "ubuntu深度学习环境的配置"
-categories: 深度学习
+categories: 
+- 深度学习
+- Linux
 tags: 
 - 环境配置
 author: Dimension
