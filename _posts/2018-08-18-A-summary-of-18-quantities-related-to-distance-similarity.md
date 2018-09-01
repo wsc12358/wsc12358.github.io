@@ -6,9 +6,10 @@ background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_1000
 categories: 
 - 深度学习
 tags: 
-- 数学
+- 损失函数
 author: Dimension
 description: 这是一些在深度学习图像处理过程中，如果不想用交叉熵损失，可以用这些距离作为损失
+ico: chat
 ---
 
 在计算机人工智能领域，距离(distance)、相似度(similarity)是经常出现的基本概念，它们在自然语言处理、计算机视觉等子领域有重要的应用，而这些概念又大多源于数学领域的度量(metric)、测度(measure)等概念。 

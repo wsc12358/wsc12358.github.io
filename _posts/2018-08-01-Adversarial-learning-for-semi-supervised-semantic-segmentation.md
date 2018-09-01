@@ -10,6 +10,7 @@ tags:
 - 图像分割
 author: Dimension
 description: 主要使用了半监督的方式进行分割
+ico: note
 ---
 
 <font color="red">GAN生成对抗网络：</font>由两个子网络组成，generator和discriminator,在训练过程中，这两个子网络进行着最小最大值机制，generator用随机向量输出一个目标数据分布的样例，discriminator从目标样例中区分出生成器生成的样例。generator通过后向传播混淆discriminator，依此generator生成与目标样例相似的样例。

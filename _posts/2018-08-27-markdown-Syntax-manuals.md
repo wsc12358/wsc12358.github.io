@@ -10,6 +10,7 @@ tags:
 author: Dimension
 description: 这篇说明主要参考了cmd markdown官方的教程，然而其有些语法并不适合jekyll+github page的语法，因此做了一些修改
 mermaid: true
+ico: book
 ---
 
 [『技术渲染的沙箱页面，点击此处编写自己的文档』](https://www.zybuluo.com/mdeditor "作业部落旗下 Cmd 在线 Markdown 编辑阅读器")

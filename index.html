@@ -1,5 +1,5 @@
----
-layout: default
+--- 
+layout: default 
 ---
 {% assign trans = site.data.values[site.lan] %}
 <!-- {% for post in paginator.posts %}
@@ -28,7 +28,7 @@ layout: default
 					<div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{posts.background-image }}');"></div>
 					<a href="{{ site.baseurl }}{{ posts.url }}">
 						<div class="item-desc">
-							<p>{{ posts.content | strip_html | strip_newlines | truncate: 100 }}</p>
+							<p>{{ posts.description | strip_html | strip_newlines | truncate: 100 }}</p>
 						</div>
 					</a>
 					<div class="item-slant reverse-slant  bg-{{ posts.background }}"></div>
@@ -40,13 +40,14 @@ layout: default
 					<div class="item-label">
 						<div class="item-title"><a href="{{ site.baseurl }}{{ posts.url }}" title="访问 {{ posts.title }}">{{ posts.title | truncate:75}}</a></div>
 						<div class="item-meta clearfix">
-							<div class="item-meta-ico bg-ico-book" style="background: url('style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+
+							<div class="item-meta-ico bg-ico-{{posts.ico}}" style="background: url('style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
 							<div class="item-meta-cat">
-								<a href="" title="访问 {{ posts.category }}" data-hover="{{ posts.category }}">{{ posts.categories
-									}}
+								<a href="" title="访问 {{ posts.category }}" data-hover="{{ posts.category }}">{{ posts.categories }}
 								</a>
-								<a href="" title="访问 {{ posts.date | date: " %Y "}}" data-hover="{{ posts.date | date: "
-								 %F %H:%M "}}">{{ posts.date | date: "%F %H:%M"}}</a></div>
+								<a href="" title="访问 {{ posts.date | date: " %Y "}}" data-hover="{{ posts.date | date: " %F %H:%M "}}">{{ posts.date
+									| date: "%F %H:%M"}}</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -57,17 +58,15 @@ layout: default
 </div>
 
 <center>
-<div class="pagination" style=>
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">向前</a>
-      {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">向前</a>
-      {% endif %}
-  {% endif %}
-  <span class="page_number ">{{ trans.page }}: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">向后</a>
-  {% endif %}
-</div>
+	<div class="pagination" style=>
+		{% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
+		<a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">向前</a>
+		{% else %}
+		<a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">向前</a>
+		{% endif %} {% endif %}
+		<span class="page_number ">{{ trans.page }}: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+		<a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">向后</a>
+		{% endif %}
+	</div>
 </center>

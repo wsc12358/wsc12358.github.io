@@ -11,6 +11,7 @@ tags:
 author: Dimension
 description: 主要对GAN，GAN的缺点以及对WGAN的前期准备，WAGN和WGAN-gp进行了总结
 mermaid: true
+ico: lock
 ---
 # 1.关于GAN的简单了解
 

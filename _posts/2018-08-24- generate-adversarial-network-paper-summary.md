@@ -10,6 +10,7 @@ tags:
 - GAN网络家族
 author: Dimension
 description: 对GAN和GAN的衍生版以及简单的应用进行了整理
+ico: chat
 ---
 
 转自[haoji007](https://blog.csdn.net/haoji007/article/details/80392454)，对目前GAN经典的及最新的较有影响力的论文进行了阅读与整理，目前仅完成了论文梗概的总结。后续将会分篇详细介绍。
