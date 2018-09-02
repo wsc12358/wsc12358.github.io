@@ -6,7 +6,7 @@ TIME=`date "+%H:%M:%S"`
 
 push()
 {
-  git commit
+  commit
   git push
   echo "Successfully push"
 }
