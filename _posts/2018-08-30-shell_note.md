@@ -10,6 +10,7 @@ tags:
 author: Dimension
 description: 主要记录了shell最基础的语法以及简单的应用
 mermaid: true
+date: 2018-08-30 19:20:21
 ico: book
 ---
 

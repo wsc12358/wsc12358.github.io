@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="well">
+        <p style="color:brown">目前已完成{{ site.posts.size }}篇博客</p>
 {%for post in site.posts %}
     {% unless post.next %}
         <h2>{{ post.date | date: '%Y' }}</h2>
