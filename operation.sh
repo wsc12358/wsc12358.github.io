@@ -55,3 +55,4 @@ do
    esac
 done
 echo "Your choice is:$choice"
+echo "operation finish!"
