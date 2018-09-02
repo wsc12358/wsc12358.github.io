@@ -42,14 +42,16 @@ if [ ! -e "$DIR/_posts/$FILE_NAME" ]; then
     echo "author: Dimension">>_posts/$FILE_NAME
     echo "description:">>_posts/$FILE_NAME
     echo "mermaid: true">>_posts/$FILE_NAME
+    echo "date: $DATE $TIME">>_posts/$FILE_NAME
     echo "ico:">>_posts/$FILE_NAME
     echo "---">>_posts/$FILE_NAME
     echo "\n">>_posts/$FILE_NAME
     echo "* 目录   ">>_posts/$FILE_NAME
     echo "{:toc #markdown-toc}">>_posts/$FILE_NAME
+    echo "Successfully Create a markdown file in _post/"
 else
     echo "file exists..." 
 fi
 
-echo "Successfully Create a markdown file in _post/"
+
 
