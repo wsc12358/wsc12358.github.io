@@ -18,7 +18,7 @@ date_format:
   categories: "%m-%Y"
   tag: "%m-%Y"
 # Language
-lan: "en" 
+lan: "cn" 
 
 paginate: 12
 
@@ -28,7 +28,7 @@ kramdown:
     input: GFM
 plugins:
   - jekyll-feed
-gems: ['jekyll-paginate']
+plugins: ['jekyll-paginate']
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
 
