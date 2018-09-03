@@ -36,7 +36,7 @@ print(str)
 
 ## python中终端输入
 代码示例：
-```
+```python
 str=input()
 print(str)
 
