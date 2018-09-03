@@ -10,6 +10,7 @@ tags:
 - GAN网络家族
 author: Dimension
 description: 对GAN和GAN的衍生版以及简单的应用进行了整理
+date: 2018-08-24 13:45:56
 ico: chat
 ---
 

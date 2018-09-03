@@ -10,6 +10,7 @@ tags:
 author: Dimension
 description: 这篇说明主要参考了cmd markdown官方的教程，然而其有些语法并不适合jekyll+github page的语法，因此做了一些修改
 mermaid: true
+date: 2018-08-27 09:56:56
 ico: book
 ---
 

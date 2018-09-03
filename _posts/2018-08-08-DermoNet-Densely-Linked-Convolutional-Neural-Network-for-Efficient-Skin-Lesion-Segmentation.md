@@ -10,6 +10,7 @@ tags:
 - 图像分割
 author: Dimension
 description: 提出了一种新的分割网络，对皮肤病变图进行分割，创新点为使用了Unet的encoder和decoder原理，连接了残差块，接了DenseNet的特点，网络较大
+date: 2018-08-08 14:25:18
 ico: note
 ---
 

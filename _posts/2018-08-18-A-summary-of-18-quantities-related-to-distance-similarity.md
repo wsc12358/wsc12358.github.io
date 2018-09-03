@@ -9,6 +9,7 @@ tags:
 - 损失函数
 author: Dimension
 description: 这是一些在深度学习图像处理过程中，如果不想用交叉熵损失，可以用这些距离作为损失
+date: 2018-08-18 22:23:56
 ico: chat
 ---
 

@@ -11,6 +11,7 @@ tags:
 - 环境配置
 author: Dimension
 description: ubuntu16.04中配置深度学习环境的基础就是禁用nouveau原生显卡驱动，装NVIDIA显卡驱动，cuda和cudnn
+date: 2018-07-29 15:32:45
 ico: web
 ---
 在ubuntu中配置GPU的深度学习环境相较于win问题要多很多，这几天琢磨了一下Ubuntu下的环境配置，参考很多人的博客，也遇到了不少坑，好不容易配置成功了，希望写下来，和大家分享，避免大家走弯路。环境的配置主要是nvidia显卡驱动的安装，在驱动安装的过程中遇到了问题，可以参考博客后面的<font color="red">问题解决方案</font>，主要步骤就是装nvidia驱动，然后是安装cuda和cudnn，这两个一般问题不大。配置成功后就可以根据需要安装自己使用的深度学习框架（比如目前比较火的tensorflow和pytorch）。这两个框架本人建议使用Anconda安装，一来方便安装，二来如果出错，可以直接删除anconda文件夹重新安装即可。

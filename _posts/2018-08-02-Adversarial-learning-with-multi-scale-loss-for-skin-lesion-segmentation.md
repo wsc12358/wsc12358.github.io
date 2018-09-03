@@ -10,6 +10,7 @@ tags:
 - 图像分割
 author: Dimension
 description: 这篇论文主要是使用了一个多层损失函数，将分割网络分割的图逐像素与原图想成，ground truth和原图进行想成，然后使用Discriminator进行处理，最后将二者相减算出多层损失
+date: 2018-08-02 12:02:32
 ico: note
 ---
 

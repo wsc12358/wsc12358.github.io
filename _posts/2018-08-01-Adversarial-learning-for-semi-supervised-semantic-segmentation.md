@@ -10,6 +10,7 @@ tags:
 - 图像分割
 author: Dimension
 description: 主要使用了半监督的方式进行分割
+date: 2018-08-01 20:20:32
 ico: note
 ---
 
