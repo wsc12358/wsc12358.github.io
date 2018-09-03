@@ -149,6 +149,7 @@ seq=["---\n",
     "* 目录   \n",
     "{:toc #markdown-toc}"]
 
+it=iter(seq)
 file=open("_posts/"+file_name,"w",encoding='utf-8')
 for sequence in it:   
     file.write(sequence)
