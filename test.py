@@ -26,9 +26,15 @@ def notify_result(num):
     if method:
         method()
 
+class Info:
+    def __init__(self,Date):
+        self.Date=Date
+
 if __name__ == "__main__":
-    notify_result(0)
-    notify_result(1)
-    notify_result(2)
-    notify_result(3)
-    notify_result(4)
+    import time
+    date=time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    str=f'git commit -m "{date}"'
+    print(str)
+    a=1
+    my_str=f"a={a}"
+    print(my_str)
