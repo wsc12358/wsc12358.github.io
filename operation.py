@@ -17,7 +17,7 @@ def add_all():
 
 def commit():
     add_all()
-    str=f'git commit -m "{date}"'
+    str=f'git commit -m "{date} {time}"'
     os.system(str)
     print("Successfully commit")
 
