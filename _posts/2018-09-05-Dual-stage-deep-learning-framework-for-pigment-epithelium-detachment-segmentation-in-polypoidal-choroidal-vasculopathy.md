@@ -4,9 +4,11 @@ title: "Dual-stage deep learning framework for pigment epithelium detachment seg
 background: deepgrey
 background-image: http://img4.duitang.com/uploads/item/201509/26/20150926104627_4xrcE.thumb.700_0.jpeg
 categories:
--
+- 论文
+- 深度学习
 tags:
--
+- 图像分割
+- OCT
 author: Dimension
 description:
 mermaid: true
