@@ -39,7 +39,7 @@ def main():
         seq=["---\n",
         "layout: post\n",
         "title: "+"\""+post_title+"\""+"\n",
-        "background: red\n",
+        "background: #white grey deepgrey blue purple green yellow red orange\n",
         "background-image:\n",
         "categories:\n",
         "-\n",
@@ -49,7 +49,7 @@ def main():
         "description:\n",
         "mermaid: true\n",
         "date: "+date+" "+time+"\n",
-        "ico:\n",
+        "ico: #book game note chat code image web link design lock\n",
         "---\n",
         "\n",
         "* 目录   \n",
@@ -65,3 +65,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
