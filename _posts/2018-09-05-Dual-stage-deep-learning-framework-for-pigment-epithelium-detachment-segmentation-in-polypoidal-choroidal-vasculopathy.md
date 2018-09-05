@@ -27,7 +27,7 @@ ico: note #book game note chat code image web link design lock
 
 如下图，serous PED是在PRE层下面出现的拱形区域，而vascularized PED在RPE层下具有非均质标志，具有高反射性血管病变和低反射性管腔。因此，邻近组织的同质性以及PED内部的异质性给PCV患者带血管蒂的PED的自动分割带来了困难。
 
-[这里是图片](/assets/images/2018-9-5/1.png)
+![这里是图片](/wsc12358.github.io/assets/images/2018-9-5/1.png)
 
 论文中介绍了几个传统的(非深度学习)的方法，然而，对于图像质量和灰度变化都有很大的敏感性。针对OCT图像，提出了一种基于图搜索的DNN分割模型。Roy等人提出了一种RelayNet的网络分割视网膜层和流体。这篇论文提出了一种基于DNN的框架对PED进行分割。是一种双阶段的DNN的学习。首先通过DNN对图像中BM层进行学习，接着我们使用得到的BM层作为参考来辅助另一个DNN来对PED区域进行分割。虽然单级网络不能解决不同类型的OCT成像问题，但我们的框架关注不同阶段的不同问题，因此我们的框架比单级网络表现更好。
 
