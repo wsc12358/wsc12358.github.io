@@ -38,7 +38,7 @@ def main():
         post_title.encode('utf-8')
         seq=["---\n",
         "layout: post\n",
-        "title: "+post_title+"\n",
+        "title: "+"\""+post_title+"\""+"\n",
         "background: red\n",
         "background-image:\n",
         "categories:\n",
