@@ -89,4 +89,4 @@ $$
 FPVF=\frac{|V_R|-|V_R\bigcap{V_G}|}{|V_{\varepsilon}-V_G|}
 $$
 
-其中，$|V_R|$,$|V_G|$,$|V_{\varepsilon}|$分别是BM和ILM之间的segmentation results, ground truth 和 retina volume,
+其中，$\vert{V_R}\vert$, $\vert{V_G}\vert$, $\vert{V_{\varepsilon}}\vert$ 分别是BM和ILM之间的segmentation results, ground truth 和 retina volume,
