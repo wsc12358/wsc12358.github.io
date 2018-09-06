@@ -60,3 +60,33 @@ ico: note #book game note chat code image web link design lock
 $$
 Y_{i^{''}j^{''}d^{''}}=\sum_{d^{'}=1}^{D}\sum_{i^{'}=1}^{\varphi(H^{'},r)}\sum_{j^{'}=1}^{\varphi(W^{'},r)}F_{1+ri^{'}+\phi(i^{''}+z,r),1+rj^{'}+\phi(j^{''}+z,r),d^{''},d^{'}}×X_{1-i^{'}\varphi(i^{''}+z,r),1-j^{'}\varphi(j^{''}+z,r),d^{'}}
 $$
+
+其中$F\in{\mathbb{R}^{H^{'}×W^{'}×D×D^{'}}}$是反卷积权重，X和Y分别是反卷积的输入和输出，z是反卷积padding大小，r是卷积步长，$\phi(a,b)=(a-1)mod b$,$\varphi(a,b)=\frac{a-1}{b}$。
+损失函数定义为：
+
+$$
+L=\sum_{x\in{S}}(-x^{c}+log\sum_{t=1}^{2}e^{x^{t}})+\lambda||W||^2
+$$
+
+其中，S是训练图像像素集合，$x^t$是位置x第t通道反卷积输出，c是x的label，$\lambda$是权重W的衰减正则化，通常设为0.0005。
+
+### 7 优化指标
+我们这里用到的优化指标有true positive volume fraction (TPVF), dice similarity coefficient (DSC), positive predictive value (PPV) 和 false positive volume fraction (FPVF)，其定义如下：
+
+$$
+TPVF=\frac{|V_{R}\bigcap{V_G}|}{|V_G|}
+$$
+
+$$
+DSC=2×{\frac{|V_R\bigcap{V_G}|}{|V_R\bigcup{V_G}|}}
+$$
+
+$$
+PPV=\frac{|V_R\bigcap{V_G}|}{|V_R|}
+$$
+
+$$
+FPVF=\frac{|V_R|-|V_R\bigcap{V_G}|}{|V_{\varepsilon}-V_G|}
+$$
+
+其中，$|V_R|$,$|V_G|$,$|V_{\varepsilon}|$分别是BM和ILM之间的segmentation results, ground truth 和 retina volume,
