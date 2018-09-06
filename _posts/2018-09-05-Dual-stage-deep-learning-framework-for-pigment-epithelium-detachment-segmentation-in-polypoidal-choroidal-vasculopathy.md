@@ -16,6 +16,8 @@ date: 2018-09-05 20:53:04
 ico: note #book game note chat code image web link design lock
 ---
 
+>首先传送门--------------->[论文](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5611923/pdf/boe-8-9-4061.pdf)
+
 ## 简介
 息肉状脉络膜血管病变（polypoidal choroidal vasculopathy(pcv)）是一种具有威胁性的渗透性黄斑病，视网膜色素上皮脱离(pigment epithelium detachment (PED))是其常见的症状，表现在视网膜色素上皮(RPE)下的渗漏和出血，由于PED volume可以预测PCV疾病的治疗效果，因此在临床实践中需要精确可靠的PED分割进行测量；因此精确有效的PED分割在PCV诊断和治疗中至关重要。
 
