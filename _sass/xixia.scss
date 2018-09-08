@@ -2,15 +2,15 @@
 
 /* main theme */
 $main-color: #233142 !default;
-$second-color: #e74c3c !default;
+$second-color: #dd3636 !default;
 $third-color: #0977b6 !default;
 
 $link-color-1:#aaa !default;
-
+$link-color-2:rgb(29, 115, 185) !default;
 /* side bar */
 $side-bar-color: #fff !default;
-$side-bar-background-color: $main-color;
-$side-bar-a-color: $link-color-1;
+$side-bar-background-color: #fff;
+$side-bar-a-color: $link-color-2;
 $side-bar-a-hover-color: $second-color;
 
 /* footer */
