@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ReLayNet: retinal layer and fluid segmentation　of macular optical coherence tomography using　fully convolutional networks"
+title: "ReLayNet: retinal layer and fluid segmentation of macular optical coherence tomography using　fully convolutional networks"
 background: red
 background-image: https://img4q.duitang.com/uploads/item/201505/09/20150509002834_HM5XR.thumb.700_0.png
 categories:
