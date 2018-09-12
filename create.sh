@@ -43,7 +43,7 @@ if [ ! -e "$DIR/_posts/$FILE_NAME" ]; then
     echo "description:">>_posts/$FILE_NAME
     echo "mermaid: true">>_posts/$FILE_NAME
     echo "date: $DATE $TIME">>_posts/$FILE_NAME
-    echo "ico:">>_posts/$FILE_NAME
+    echo "ico:　#book game note chat code image web link design lock">>_posts/$FILE_NAME
     echo "---">>_posts/$FILE_NAME
     echo "\n">>_posts/$FILE_NAME
     echo "* 目录   ">>_posts/$FILE_NAME
