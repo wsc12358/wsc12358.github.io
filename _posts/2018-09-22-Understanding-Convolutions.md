@@ -28,6 +28,7 @@ Let’s break this down. After the first drop, it will land a units away from th
 Now after this first drop, we pick the ball up and drop it from another height above the point where it first landed. The probability of the ball rolling **b** units away from the new starting point is $g(b)$, where $g$ may be a different probability distribution if it’s dropped from a different height.
 
 ![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/14.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/14.png',style="width:50%;"/>
 
 If we fix the result of the first drop so we know the ball went distance **a**, for the ball to go a total distance **c**, the distance traveled in the second drop is also fixed at **b**, where $a+b=c$. So the probability of this happening is simply $f(a)⋅g(b)$.[^1]
 
