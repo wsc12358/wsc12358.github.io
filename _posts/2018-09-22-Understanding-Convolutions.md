@@ -27,18 +27,17 @@ Let’s break this down. After the first drop, it will land a units away from th
 
 Now after this first drop, we pick the ball up and drop it from another height above the point where it first landed. The probability of the ball rolling **b** units away from the new starting point is $g(b)$, where $g$ may be a different probability distribution if it’s dropped from a different height.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/14.png)
 <img src='/wsc12358.github.io/assets/images/2018-09-22/14.png' style="width:50%;"/>
 
 If we fix the result of the first drop so we know the ball went distance **a**, for the ball to go a total distance **c**, the distance traveled in the second drop is also fixed at **b**, where $a+b=c$. So the probability of this happening is simply $f(a)⋅g(b)$.[^1]
 
 Let’s think about this with a specific discrete example. We want the total distance c to be **3**. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$. The probability of this is $f(2)⋅g(1)$.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/15.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/15.png' style="width:50%;"/>
 
 However, this isn’t the only way we could get to a total distance of 3. The ball could roll 1 units the first time, and 2 the second. Or 0 units the first time and all 3 the second. It could go any **a** and **b**, as long as they add to 3.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/16.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/16.png' style="width:50%;"/>
 
 The probabilities are $f(1)⋅g(2)$ and $f(0)⋅g(3)$, respectively.
 
@@ -62,28 +61,28 @@ This is the standard definition[^2] of convolution.
 
 To make this a bit more concrete, we can think about this in terms of positions the ball might land. After the first drop, it will land at an intermediate position $a$ with probability $f(a)$. If it lands at $a$, it has probability $g(c−a)$ of landing at a position c.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/17.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/17.png' style="width:50%;"/>
 
 To get the convolution, we consider all intermediate positions.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/18.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/18.png' style="width:50%;"/>
 
 ## Visualizing Convolutions
 There’s a very nice trick that helps one think about convolutions more easily.
 
 First, an observation. Suppose the probability that a ball lands a certain distance x from where it started is $f(x)$. Then, afterwards, the probability that it started a distance x from where it landed is $f(−x)$.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/19.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/19.png' style="width:50%;"/>
 
 If we know the ball lands at a position c after the second drop, what is the probability that the previous position was a?
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/20.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/20.png' style="width:50%;"/>
 
 So the probability that the previous position was a is $g(−(a−c))=g(c−a)$.
 
 Now, consider the probability each intermediate position contributes to the ball finally landing at c. We know the probability of the first drop putting the ball into the intermediate position a is $f(a)$. We also know that the probability of it having been in a, if it lands at c is $g(c−a)$.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/21.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/21.png' style="width:50%;"/>
 
 Summing over the as, we get the convolution.
 
@@ -91,17 +90,17 @@ The advantage of this approach is that it allows us to visualize the evaluation 
 
 For example, we can see that it peaks when the distributions align.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/22.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/22.png' style="width:50%;"/>
 
 And shrinks as the intersection between the distributions gets smaller.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/23.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/23.png' style="width:50%;"/>
 
 By using this trick in an animation, it really becomes possible to visually understand convolutions.
 
 Below, we’re able to visualize the convolution of two box functions:
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/24.gif)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/24.png' style="width:50%;"/>
 
 Armed with this perspective, a lot of things become more intuitive.
 
@@ -111,7 +110,8 @@ Let’s consider a non-probabilistic example. Convolutions are sometimes used in
 Convolutions are an extremely general idea. We can also use them in a higher number of dimensions.
 
 Let’s consider our example of a falling ball again. Now, as it falls, it’s position shifts not only in one dimension, but in two.
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/25.png)
+
+<img src='/wsc12358.github.io/assets/images/2018-09-22/25.png' style="width:50%;"/>
 
 Convolution is the same as before:
 
@@ -129,17 +129,17 @@ Just like one-dimensional convolutions, we can think of a two-dimensional convol
 
 One common application of this is image processing. We can think of images as two-dimensional functions. Many important image transformations are convolutions where you convolve the image function with a very small, local function called a “kernel.”
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/26.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/26.png' style="width:50%;"/>
 
 The kernel slides to every position of the image and computes a new pixel as a weighted sum of the pixels it floats over.
 
 For example, by averaging a 3x3 box of pixels, we can blur an image. To do this, our kernel takes the value 1/9 on each pixel in the box,
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/27.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/27.png' style="width:50%;"/>
 
 We can also detect edges by taking the values −1 and 1 on two adjacent pixels, and zero everywhere else. That is, we subtract two adjacent pixels. When side by side pixels are similar, this is gives us approximately zero. On edges, however, adjacent pixels are very different in the direction perpendicular to the edge.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/28.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/28.png' style="width:50%;"/>
 
 The gimp documentation has many other examples.
 ## Convolutional Neural Networks
@@ -147,7 +147,7 @@ So, how does convolution relate to convolutional neural networks?
 
 Consider a 1-dimensional convolutional layer with inputs $\{x_n\}$ and outputs $\{y_n\}$, like we discussed in the previous post:
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/29.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/29.png' style="width:50%;"/>
 
 As we observed, we can describe the outputs in terms of the inputs:
 
@@ -176,7 +176,7 @@ Each row of the matrix describes the weights connecting a neuron to its inputs.
 
 Returning to the convolutional layer, though, because there are multiple copies of the same neuron, many weights appear in multiple positions.
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/30.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/30.png' style="width:50%;"/>
 
 Which corresponds to the equations:
 
@@ -218,7 +218,7 @@ Multiplying by the above matrix is the same thing as convolving with $[...0,\ome
 
 What about two-dimensional convolutional layers?
 
-![这里是图片](/wsc12358.github.io/assets/images/2018-09-22/31.png)
+<img src='/wsc12358.github.io/assets/images/2018-09-22/31.png' style="width:50%;"/>
 
 The wiring of a two dimensional convolutional layer corresponds to a two-dimensional convolution.
 
