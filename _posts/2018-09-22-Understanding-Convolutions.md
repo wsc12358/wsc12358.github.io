@@ -244,8 +244,7 @@ I’m also grateful to Michael Nielsen and Dario Amodei for their comments and s
 
 [^1]:We want the probability of the ball rolling $a$ units the first time and also rolling $b$ units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$.
 
-[^2]:The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
-For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?  $$\sum_{a+b=c}f(a)⋅g(b)=\sum_{b+a=c}g(b)⋅f(a)$$  Convolution is also associative. That is, $(f∗g)∗h=f∗(g∗h)$. Why? $$\sum_{(a+b)+c=d}(f(a)⋅g(b))⋅h(c)=\sum_{a+(b+c)=d}f(a)⋅(g(b)⋅h(c))$$
+[^2]:The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.<br>For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?  $$\sum_{a+b=c}f(a)⋅g(b)=\sum_{b+a=c}g(b)⋅f(a)$$  Convolution is also associative. That is, $(f∗g)∗h=f∗(g∗h)$. Why? $$\sum_{(a+b)+c=d}(f(a)⋅g(b))⋅h(c)=\sum_{a+(b+c)=d}f(a)⋅(g(b)⋅h(c))$$
 
 [^3]:There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
 
