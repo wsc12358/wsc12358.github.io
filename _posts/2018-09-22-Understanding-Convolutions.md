@@ -185,6 +185,7 @@ $$y_1=\sigma(W_{0}x_1+W_{1}x_2-b)$$
 So while, normally, a weight matrix connects every input to every neuron with different weights:
 
 $$
+W=
  \left[
  \begin{matrix}
    W_{0,0} & W_{0,1} & W_{0,2} & W_{0,3} & ... \\
@@ -200,6 +201,7 @@ $$
 The matrix for a convolutional layer like the one above looks quite different. The same weights appear in a bunch of positions. And because neurons don’t connect to many possible inputs, there’s lots of zeros.
 
 $$
+W=
  \left[
  \begin{matrix}
    \omega_0 & \omega_1 & 0 & 0 & ... \\
