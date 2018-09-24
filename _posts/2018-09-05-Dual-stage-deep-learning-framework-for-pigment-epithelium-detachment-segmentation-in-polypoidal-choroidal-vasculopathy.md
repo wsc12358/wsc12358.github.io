@@ -53,6 +53,7 @@ ico: note #book game note chat code image web link design lock
 
 ![这里是图片](/wsc12358.github.io/assets/images/2018-9-5/4.png)
 
+
 ### 2 框架设定
 我们用MatConvNet实现了框架。epochs为50，batch size为20，learning rate为0.0001。我们的实验遵循十倍交叉验证协议，每个验证过程包含45个病人扫描作为训练集，5个扫描作为验证集。
 
