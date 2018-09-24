@@ -41,3 +41,5 @@ $$
 
 其中，$\vert{V_R}\vert$, $\vert{V_G}\vert$, $\vert{V_{\varepsilon}}\vert$ 分别是segmentation results, ground truth 和 origin image。
 
+![图片找不到了]({{ site.baseurl }}/assets/images/2018-09-06/1.png)
+
